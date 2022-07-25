@@ -1,0 +1,193 @@
+body
+{ margin:0; 
+    padding: 0;
+    height: 100vh;
+} 
+    #particles-js5{ 
+        position:fixed;
+         width: 100%; 
+         height: 100%; 
+         background-color: black; 
+        }
+
+.fundo{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    .botao{
+        margin-top: -200px;
+        margin-left: 0px;
+        position: absolute;
+      }
+
+    .botao .botaoAção{
+        padding: 10px;
+        font-size: 30px;
+        outline: none;
+        color: #fff;
+        border: 4px solid #e5505d;
+        background-color: transparent;
+        border-radius: 10px;
+        position: relative;
+        transition:  ease-out 0.3s;
+        z-index: 1;       
+        font-family: 'Gotham';
+    }
+
+    .botao .botaoAção:hover {
+        color: #fff;
+        cursor: pointer;
+      }
+
+      .botao .botaoAção:before {
+        transition: 0.5s all ease;
+        position: absolute;
+        top:  0;
+        left: 50%;
+        right: 50%;
+        bottom: 0;
+        opacity: 0;
+        content: "";
+        background-color: #e5505d;
+      }
+
+      .botao .botaoAção:hover:before{
+        transition: 0.5s all ease;
+        left: 0;
+        right: 0;
+        opacity: 1;
+        z-index: -1;
+      }
+
+img{
+    width: 200px;
+    margin-top: 810px;
+    
+}
+
+.foguete{
+    bottom: 0;
+    position: relative;
+    animation: takeOff 1s 0.2s 1 ease both, animação 0.8s ease infinite;;
+    
+}
+
+
+.fundo i{
+    display: flex;
+    width: 100vh;
+    top: -250px;    
+    background: #fff;
+    animation: animaçãoEstrelas linear infinite;
+    
+}
+
+@keyframes animaçãoEstrelas {
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(200vh);
+    }
+
+}
+
+@keyframes takeOff{
+    0%{
+        top: 0px;
+    }
+    90%{
+        top: -300px;
+    }
+
+    100% {
+        top: -300px
+    }
+}
+@keyframes animStar {
+    from{
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(-2000px);
+    }
+}
+
+.voar{
+    animation: voar 1s ease-in-out both;
+}
+
+@keyframes voar{
+    0%{
+        top: -300px;
+    }
+    90%{
+        top: -250px;
+    }
+
+    100% {
+        top: -5000px
+    }
+}
+
+.fundo .foguete::before{
+    content: '';
+    position: absolute;
+    bottom: -196px;
+    left: 49.8%;
+    transform: translateX(-51%);
+    width: 10px;
+    height: 200px;
+    background: linear-gradient(#e5505d, transparent);
+
+}
+
+.fundo .foguete::after{
+    content: '';
+    position: absolute;
+    bottom: -196px;
+    left: 49.8%;
+    transform: translateX(-51%);
+    width: 10px;
+    height: 200px;
+    background: linear-gradient(#e5505d, transparent);
+    filter: blur(10px);
+}
+
+@keyframes animação {
+    0%,100%{
+        transform: translateY(-2px) 
+    }
+
+    50%{
+        transform: translateY(2px)
+    }
+}
+
+.texto {
+    margin-top: -500px;
+    margin-left: 0px;
+    position: absolute;
+    color: #fff; 
+    font-size: 20px;
+    font-family: 'Gotham';
+    text-align: center;
+    
+}
+
+.pronto {
+    
+    color: #e5505d;
+    margin-left:0px;
+    margin-top: 20px;
+    font-size: 30px;    
+    font-family: 'Gotham Black', sans-serif;
+
+}
+
+
